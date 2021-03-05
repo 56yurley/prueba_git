@@ -10,6 +10,14 @@ public class FormCalculator extends JFrame{
     private JButton btnResult = new JButton("Calculator");
 
     private JLabel result = new JLabel();
+    private static FormCalculator formCalculator;
+    
+    public static FormCalculator getInstance(){
+        if (null == formCalculator){
+            formCalculator = new FormCalculator();
+        }
+        return formCalculator;
+    }
 
     public FormCalculator(){
         panel1.add(lblNum1);
