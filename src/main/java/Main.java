@@ -1,4 +1,3 @@
-import java.text.Normalizer;
 import java.util.Scanner;
 
 public class Main {
@@ -10,9 +9,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        FormCalculator frmtes = new FormCalculator();
-        frmtes.setVisible(true);
-        System.out.println("hola");
+       ControllerCalculator controllerCalculator = new ControllerCalculator();
         loadDates();
     }
 

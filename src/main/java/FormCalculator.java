@@ -5,11 +5,11 @@ public class FormCalculator extends JFrame{
 
     private JLabel lblNum1 = new JLabel("Number One");
     private JLabel lblNum2 = new JLabel("Number Two");
-    private JTextField textField1 = new JTextField(3);
-    private JTextField textField2 = new JTextField(3);
-    private JButton btnResult = new JButton("Calculator");
+    public JTextField textField1 = new JTextField(3);
+    public JTextField textField2 = new JTextField(3);
+    public JButton btnResult = new JButton("Calculator");
 
-    private JLabel result = new JLabel();
+    public JLabel result = new JLabel();
     private static FormCalculator formCalculator;
     
     public static FormCalculator getInstance(){
@@ -20,16 +20,47 @@ public class FormCalculator extends JFrame{
     }
 
     public FormCalculator(){
-        panel1.add(lblNum1);
-        panel1.add(textField1);
-        panel1.add(lblNum2);
-        panel1.add(textField2);
-        panel1.add(btnResult);
-        panel1.add(result);
+        createLayout();
 
         this.add(panel1);
-        this.setSize(500, 200);
+        this.setSize(300, 200);
         this.setTitle("Basic Calculator");
         //this.add(panel1);
+    }
+
+    private void createLayout(){
+        GroupLayout pnlLayout = new GroupLayout(panel1);
+        panel1.setLayout(pnlLayout);
+        pnlLayout.setAutoCreateGaps(true);
+        pnlLayout.setHorizontalGroup(pnlLayout.createSequentialGroup()
+                .addGroup(pnlLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addGroup(pnlLayout.createSequentialGroup()
+                                .addGap(5)
+                                .addComponent(lblNum1, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+                        )
+                        .addGroup(pnlLayout.createSequentialGroup()
+                                .addGap(5)
+                                .addComponent(lblNum2, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
+                        )
+                        .addComponent(btnResult, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(result, GroupLayout.PREFERRED_SIZE, 275, GroupLayout.PREFERRED_SIZE)
+                ));
+
+
+        pnlLayout.setVerticalGroup(pnlLayout.createSequentialGroup()
+                .addGap(10)
+                .addGroup(pnlLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addComponent(lblNum1, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                )
+                .addGroup(pnlLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addComponent(lblNum2, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                )
+                .addComponent(btnResult, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                .addComponent(result, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+        );
     }
 }
