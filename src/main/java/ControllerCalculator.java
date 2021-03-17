@@ -19,6 +19,7 @@ public class ControllerCalculator {
         int num1 = Integer.parseInt(formCalculator.textField1.getText());
         int num2 = Integer.parseInt(formCalculator.textField2.getText());
 
-        formCalculator.result.setText("The Sume is: " + new Sume().operation(num1, num2));
+        formCalculator.resultSume.setText("The Sume is: " + new Sume().operation(num1, num2));
+        formCalculator.resultRest.setText("The Rest is: " + new Rest().operation(num1, num2));
     }
 }
