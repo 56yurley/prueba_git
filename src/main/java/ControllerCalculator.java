@@ -22,5 +22,6 @@ public class ControllerCalculator {
         formCalculator.resultSume.setText("The Sume is: " + new Sume().operation(num1, num2));
         formCalculator.resultRest.setText("The Rest is: " + new Rest().operation(num1, num2));
         formCalculator.resultMultiplication.setText("The Multiplication is: " + new Multiplication().operation(num1, num2));
+        formCalculator.resultDivision.setText("The Division is: " + new Division().operation(num1, num2));
     }
 }

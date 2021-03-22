@@ -12,6 +12,7 @@ public class FormCalculator extends JFrame{
     public JLabel resultSume = new JLabel();
     public JLabel resultRest = new JLabel();
     public JLabel resultMultiplication = new JLabel();
+    public JLabel resultDivision = new JLabel();
     private static FormCalculator formCalculator;
     
     public static FormCalculator getInstance(){
@@ -50,6 +51,7 @@ public class FormCalculator extends JFrame{
                         .addComponent(resultSume, GroupLayout.PREFERRED_SIZE, 275, GroupLayout.PREFERRED_SIZE)
                         .addComponent(resultRest, GroupLayout.PREFERRED_SIZE, 275, GroupLayout.PREFERRED_SIZE)
                         .addComponent(resultMultiplication, GroupLayout.PREFERRED_SIZE, 275, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(resultDivision, GroupLayout.PREFERRED_SIZE, 275, GroupLayout.PREFERRED_SIZE)
                 ));
 
 
@@ -67,6 +69,7 @@ public class FormCalculator extends JFrame{
                 .addComponent(resultSume, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
                 .addComponent(resultRest, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
                 .addComponent(resultMultiplication, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                .addComponent(resultDivision, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
         );
     }
 }
