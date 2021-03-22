@@ -11,6 +11,7 @@ public class FormCalculator extends JFrame{
 
     public JLabel resultSume = new JLabel();
     public JLabel resultRest = new JLabel();
+    public JLabel resultMultiplication = new JLabel();
     private static FormCalculator formCalculator;
     
     public static FormCalculator getInstance(){
@@ -24,7 +25,7 @@ public class FormCalculator extends JFrame{
         createLayout();
 
         this.add(panel1);
-        this.setSize(300, 200);
+        this.setSize(300, 250);
         this.setTitle("Basic Calculator");
         //this.add(panel1);
     }
@@ -48,6 +49,7 @@ public class FormCalculator extends JFrame{
                         .addComponent(btnResult, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
                         .addComponent(resultSume, GroupLayout.PREFERRED_SIZE, 275, GroupLayout.PREFERRED_SIZE)
                         .addComponent(resultRest, GroupLayout.PREFERRED_SIZE, 275, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(resultMultiplication, GroupLayout.PREFERRED_SIZE, 275, GroupLayout.PREFERRED_SIZE)
                 ));
 
 
@@ -64,6 +66,7 @@ public class FormCalculator extends JFrame{
                 .addComponent(btnResult, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
                 .addComponent(resultSume, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
                 .addComponent(resultRest, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                .addComponent(resultMultiplication, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
         );
     }
 }

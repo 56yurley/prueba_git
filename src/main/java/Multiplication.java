@@ -1,3 +1,6 @@
-public int operation(int num1, int num2){
+public class Multiplication {
+    public int operation(int num1, int num2){
         return num1 * num2;
     }
+}
+
